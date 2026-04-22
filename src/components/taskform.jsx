@@ -1,15 +1,15 @@
 
 import { useState } from "react"
 
-function TasksForm (addTasks) {
+function TasksForm ({addTasks}) {
     const [input, setInput] = useState("")
-    const keepTasks = () =>{
-        addTasks((prev) =>[...prev,input])
-    }
-     console.log(keepTasks);
+
      
     const onSubmit = (e) =>{
         e.preventDefault()
+        if (input.trim() === "") return
+        addTasks(input)
+        setInput("")
     }
     
     return <>
@@ -23,8 +23,7 @@ function TasksForm (addTasks) {
         onChange={(e) => setInput(e.target.value)}></input>
 
         <button
-        type="submit"
-        onClick={keepTasks}> Ajouter </button>
+        type="submit"> Ajouter </button>
     </form>
     </>
 }

@@ -1,10 +1,10 @@
-function TaskList(tasks) {
-    return(
-        <ul>
-            {tasks.map((tasks,index) => (
-                <li key={index}>{tasks}</li>
-            ))}
-        </ul>
-    )
+function TaskList({tasks}) {
+   console.log(tasks);
+   return (
+         <ul>
+            {tasks.map((todo,index) => (<li key={index}>{todo}</li>))}
+         </ul>
+   )
+   
 }
 export default TaskList
