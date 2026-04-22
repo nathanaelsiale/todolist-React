@@ -1,10 +1,18 @@
-function TaskList({tasks}) {
-   console.log(tasks);
-   return (
-         <ul>
-            {tasks.map((todo,index) => (<li key={index}>{todo}</li>))}
-         </ul>
-   )
-   
+import TaskItem from "./taskitem.jsx";
+
+function TaskList({ tasks, deleteTask, toggleTask }) {
+  return (
+    <ul>
+      {tasks.map((task) => (
+        <TaskItem
+          key={task.id}
+          task={task}
+          deleteTask={deleteTask}
+          toggleTask={toggleTask}
+        />
+      ))}
+    </ul>
+  );
 }
-export default TaskList
+
+export default TaskList;
