@@ -11,19 +11,20 @@ function TasksForm ({addTasks}) {
         addTasks(input)
         setInput("")
     }
-    
+
+
     return <>
-    <form onSubmit={onSubmit}>
+    <form onSubmit={onSubmit} style={{marginBottom:"20px"}}>
         <input 
         id="todo"
         type="text"
         name="input"
         value={input}
         placeholder="ajouter une tâche..."
-        onChange={(e) => setInput(e.target.value)}></input>
+        onChange={(e) => setInput(e.target.value)} style={{padding:"8px", width:"70%"}}></input>
 
         <button
-        type="submit"> Ajouter </button>
+        type="submit" style={{padding:"8px ml-2"}}> Ajouter </button>
     </form>
     </>
 }

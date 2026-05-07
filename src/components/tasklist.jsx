@@ -2,7 +2,7 @@ import TaskItem from "./taskitem.jsx";
 
 function TaskList({ tasks, deleteTask, toggleTask }) {
   return (
-    <ul>
+    <ul style={{listStyle:"none", padding:0}}>
       {tasks.map((task) => (
         <TaskItem
           key={task.id}
