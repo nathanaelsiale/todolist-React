@@ -54,9 +54,9 @@ function App() {
     fontFamily:"Arial, sans-serif",
     border:"1px solid #ddd",
     borderRadius:"8px",
-    boxShadow:"0 2px 10px rgba(0,0,0,0.1)"
+    boxShadow:"0 2px 10px rgba(35, 29, 88, 0.64)"
   }}>
-  <h2 style={{textAlign:"center", color:"#333"}}>TO-DO List</h2>
+  <h2 style={{textAlign:"center", color:"#1b0db2"}}>TO-DO List</h2>
   <TasksForm addTasks={addTask} />
     <div style={{
       margin:"20px 0",
@@ -71,7 +71,7 @@ function App() {
         alignItems:"center"
       }}>
         <p style={{margin:0, fontSize:"14px", color:"#666"}}>
-          Tâche restante:<strong style={{color:"#000"}}>{remainingTasks}</strong> / {totalTasks}
+          Tâche restante:<strong style={{color:"#be1e1e"}}>{remainingTasks}</strong> / {totalTasks}
         </p>
         <button onClick={clearAll}
         style={{
